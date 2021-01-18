@@ -4,12 +4,13 @@ import { Plus, Minus } from 'react-feather';
 import * as Collapsible from '@radix-ui/react-collapsible';
 import { styled } from '../stitches.config';
 import studios, { Studio } from '../studios';
+import Image from 'next/image' 
 
 export default function Studios() {
   return (
     <Container>
       <Box css={{marginTop: '$12'}}>
-        <Text variant="headline2">Studios we visited</Text>
+        <Text variant="headline">Studios we visited</Text>
       </Box>
       <Box css={{marginTop: '$12'}}>
         {studios.map(studio => <StudioItem {...studio} />)}
@@ -50,7 +51,7 @@ const StudioItem: React.FC<StudioProps> = ({ name, city, country, visited, link,
             padding: '$4 0', 
           }}
         >
-          <Text variant="headline">
+          <Text variant="headline2">
             {name}
           </Text>
           <CollapsibleButton>
@@ -80,6 +81,27 @@ const StudioItem: React.FC<StudioProps> = ({ name, city, country, visited, link,
           </Flex>
         </CollapsibleContent>
       </Collapsible.Root>
+      <Box css={{ marginTop: '$6'}}>
+        {images.map(row => (
+          <Flex style={{  margin: '0 -5px' }}>
+            {row.map(img => (
+              <Box 
+                style={{ 
+                  flex: `calc(${img.width}/${img.height})`,
+                  padding: '5px'
+                }}
+                >
+                <Image
+                  src={`/img/interviews/${img.name}`}
+                  height={img.height}
+                  width={img.width}
+                  layout="responsive"
+                />
+              </Box>
+            ))}
+          </Flex>
+        ))}
+      </Box>
     </Box>
   )
 }
