@@ -2,9 +2,9 @@ import { styled } from '../stitches.config'
 import { Flex, Container, Link, Text, ThemeToggle } from '../components'
 
 const data = [
-  {label: 'Studios', href: '/studios'},
-  {label: 'Unknown Letter', href: '/unkown-letter'},
-  {label: 'About', href: '/about'}
+  { label: 'Studios', href: '/studios' },
+  { label: 'Unknown Letter', href: '/unkown-letter' },
+  { label: 'About', href: '/about' }
 ]
 
 type HeaderProps = {

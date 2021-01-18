@@ -11,10 +11,12 @@ export const Text = styled('div', {
       large: {
         fontWeight: '$heading',
         fontSize: '160px',
+        lineHeight: 1.2,
       },
       headline: {
         fontWeight: '$heading',
         fontSize: '$7',
+        lineHeight: 1.2,
       },
       headline2: {
         fontWeight: '$heading',

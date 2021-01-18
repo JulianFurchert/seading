@@ -1,4 +1,4 @@
-import { Container, Text, Box, Flex } from '../components'
+import { Container, Text, Box, FloatingGallery, FloatingImage, Flex } from '../components'
 
 export default function Home() {
   return (
@@ -19,21 +19,43 @@ export default function Home() {
               alignItems: 'center',
             }}
           >
-            <Text variant="large">
-              Seading
-            </Text>
+            <Box>
+              <Text variant="large">
+                Seading
+              </Text>
+              <Text variant="headline">
+                a small travel memory
+              </Text>
+            </Box>
           </Flex>
         </Container>
       </Box>
       <Box>
         <Container>
-          <Box
-            css={{
-              height: '300vh'
-            }}
-          >
-
-          </Box>
+          <FloatingGallery>
+            <Flex css={{ justifyContent: 'space-between' }}>
+              <FloatingImage />
+              <FloatingImage />
+            </Flex>
+            <Flex css={{ justifyContent: 'space-between', margin: '$10 0' }}>
+              <FloatingImage />
+              <FloatingImage />
+            </Flex>
+            <Flex css={{ justifyContent: 'center', margin: '$10 0' }}>
+              <FloatingImage />
+            </Flex>
+            <Flex css={{ justifyContent: 'space-between', margin: '$10 0' }}>
+              <FloatingImage />
+              <FloatingImage />
+            </Flex>
+            <Flex css={{ justifyContent: 'center', margin: '$10 0' }}>
+              <FloatingImage />
+            </Flex>
+            <Flex css={{ justifyContent: 'space-between', margin: '$10 0' }}>
+              <FloatingImage />
+              <FloatingImage />
+            </Flex>
+          </FloatingGallery>
         </Container>
       </Box>
     </Box>
