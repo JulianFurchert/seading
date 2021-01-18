@@ -1,6 +1,12 @@
 import { styled } from '../stitches.config'
 import { Flex, Container, Link, Text, ThemeToggle } from '../components'
 
+const data = [
+  {label: 'Studios', href: '/studios'},
+  {label: 'Unknown Letter', href: '/unkown-letter'},
+  {label: 'About', href: '/about'}
+]
+
 type HeaderProps = {
   toggleTheme: () => void
 }
@@ -10,12 +16,18 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => (
     <Container>
       <Flex css={{ justifyContent: 'space-between', alignItems: 'center', height: 60 }}>
         <Link href="/">
-          Julian Furchert
+          Seading
         </Link>
         <Flex>
-          <Text css={{marginRight: '$2'}}>
-            Menu
-          </Text>
+          {data.map(entry => (
+            <Link 
+              key={entry.href}
+              href={entry.href} 
+              css={{ marginRight: '$5' }} 
+            >
+              {entry.label}
+            </Link>
+          ))}
           <ThemeToggle toggleTheme={toggleTheme} />
         </Flex>
       </Flex>

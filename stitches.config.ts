@@ -47,8 +47,15 @@ const theme = {
     $3: '15px',
     $4: '20px',
     $5: '25px',
-    $6: '35px',
-    $7: '50px',
+    $6: '30px',
+    $7: '35px',
+    $8: '40px',
+    $9: '45px',
+    $10: '50px',
+    $11: '55px',
+    $12: '60px',
+    $13: '65px',
+    $14: '70px',
   },
   sizes: {
     $1: '5px',
@@ -56,8 +63,15 @@ const theme = {
     $3: '15px',
     $4: '20px',
     $5: '25px',
-    $6: '35px',
-    $7: '50px',
+    $6: '30px',
+    $7: '35px',
+    $8: '40px',
+    $9: '45px',
+    $10: '50px',
+    $11: '55px',
+    $12: '60px',
+    $13: '65px',
+    $14: '70px',
   },
   fontSizes: {
     $1: '12px',
@@ -86,32 +100,6 @@ const theme = {
 
 export const { styled, css } = createStyled({
   tokens: theme,
-  utils: {
-    marginX: () => (
-      value: keyof typeof theme['space'] | (string & {})
-    ) => ({
-      marginLeft: value,
-      marginRight: value,
-    }),
-    marginY: () => (
-      value: keyof typeof theme['space'] | (string & {})
-    ) => ({
-      marginTop: value,
-      marginBottom: value,
-    }),
-    paddingX: () => (
-      value: keyof typeof theme['space'] | (string & {})
-    ) => ({
-      paddingLeft: value,
-      paddingRight: value,
-    }),
-    paddingY: () => (
-      value: keyof typeof theme['space'] | (string & {})
-    ) => ({
-      paddingTop: value,
-      paddingBottom: value,
-    }),
-  },
   breakpoints: {
     bp1: (rule) => `@media (min-width: 520px) { ${rule} }`,
     bp2: (rule) => `@media (min-width: 900px) { ${rule} }`,

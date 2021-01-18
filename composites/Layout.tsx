@@ -17,7 +17,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, toggleTheme }) => {
       }}
     >
       <Head>
-        <title>Julian Furchert</title>
+        <title>Seading</title>
       </Head>
       <Header toggleTheme={toggleTheme} />
       <Box css={{ marginY: '100px', flexGrow: 1 }}>

@@ -8,6 +8,10 @@ export const Text = styled('div', {
   fontWeight: '$body',
   variants: {
     variant: {
+      large: {
+        fontWeight: '$heading',
+        fontSize: '160px',
+      },
       headline: {
         fontWeight: '$heading',
         fontSize: '$7',
