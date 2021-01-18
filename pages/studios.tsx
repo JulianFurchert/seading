@@ -1,7 +1,9 @@
-import { Container, Text, Box, Flex } from '../components'
-import { styled } from '../stitches.config'
-import { Info } from 'react-feather'
+import { useState } from 'react';
+import { Container, Text, Box, Flex, Link } from '../components';
+import { Plus, Minus } from 'react-feather';
 import * as Collapsible from '@radix-ui/react-collapsible';
+import { styled } from '../stitches.config';
+import studios, { Studio } from '../studios';
 
 export default function Studios() {
   return (
@@ -10,35 +12,35 @@ export default function Studios() {
         <Text variant="headline2">Studios we visited</Text>
       </Box>
       <Box css={{marginTop: '$12'}}>
-        <Studio
-          name="Somewhere Else"
-          link=""
-          city="Singapore"
-          country="Singapore"
-        />
-        <Studio
-          name="Somewhere Else"
-          link=""
-          city="Singapore"
-          country="Singapore"
-        />
+        {studios.map(studio => <StudioItem {...studio} />)}
       </Box>
     </Container>
   );
 }
 
+type StudioProps = Studio & {}
 
-type StudioProps = {
-  name: string,
-  link: string,
-  city: string,
-  country: string
-}
+const StudioItem: React.FC<StudioProps> = ({ name, city, country, visited, link, linkLabel = 'Website', images }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-const Studio: React.FC<StudioProps> = ({ name }) => {
+  const data = [
+    {
+      label: 'City',
+      value: city
+    },
+    {
+      label: 'Country',
+      value: country
+    },
+    {
+      label: 'Visited',
+      value: visited
+    }
+  ]
+
   return (
     <Box css={{ marginTop: '$14' }}>
-      <Collapsible.Root>
+      <Collapsible.Root onOpenChange={setIsOpen}>
         <Flex
           css={{
             justifyContent: 'space-between',
@@ -55,13 +57,27 @@ const Studio: React.FC<StudioProps> = ({ name }) => {
             <Text css={{ marginRight: '$1', color: 'inherit' }} >
               More info
             </Text>
-            <Info size={18} />
+            {isOpen ?  <Minus size={18} /> :  <Plus size={18} />}
           </CollapsibleButton>
         </Flex>
         <CollapsibleContent>
-          <Text>
-            Test
-          </Text>
+          <Flex>
+            <Text css={{ marginRight: '$4', color: '$gray6' }}>
+              <Link href={link}>
+                {linkLabel}
+              </Link>
+            </Text>
+            {data.map(i => (
+              <Flex css={{ marginRight: '$4'}}>
+                <Text css={{ marginRight: '$1', color: '$gray6' }}>
+                  {i.label}:
+                </Text>
+                <Text>
+                  {i.value}
+                </Text>
+              </Flex>
+            ))}
+          </Flex>
         </CollapsibleContent>
       </Collapsible.Root>
     </Box>
