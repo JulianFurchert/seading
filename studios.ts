@@ -1,3 +1,9 @@
+type Image = {
+  src: string,
+  height: string,
+  width: string
+}
+
 export type Studio = {
   name: string,
   link: string,
@@ -5,7 +11,7 @@ export type Studio = {
   city: string,
   country: string,
   visited: string,
-  images: string[]
+  images: Image[][]
 }
 
 const studios: Studio[] = [
@@ -16,8 +22,16 @@ const studios: Studio[] = [
     country: 'Singapore',
     visited: '01.12.2014',
     images: [
-      '',
-      ''
+      [
+        { src: '', width: '', height: '' },
+        { src: '', width: '', height: '' },
+        { src: '', width: '', height: '' }
+      ],
+      [
+        { src: '', width: '', height: '' },
+        { src: '', width: '', height: '' },
+        { src: '', width: '', height: '' }
+      ]
     ]
   },
   {
@@ -27,8 +41,16 @@ const studios: Studio[] = [
     country: 'Singapore',
     visited: '01.12.2014',
     images: [
-      '',
-      ''
+      [
+        { src: '', width: '', height: '' },
+        { src: '', width: '', height: '' },
+        { src: '', width: '', height: '' }
+      ],
+      [
+        { src: '', width: '', height: '' },
+        { src: '', width: '', height: '' },
+        { src: '', width: '', height: '' }
+      ]
     ]
   },
   {
@@ -38,8 +60,16 @@ const studios: Studio[] = [
     country: 'Singapore',
     visited: '01.12.2014',
     images: [
-      '',
-      ''
+      [
+        { src: '', width: '', height: '' },
+        { src: '', width: '', height: '' },
+        { src: '', width: '', height: '' }
+      ],
+      [
+        { src: '', width: '', height: '' },
+        { src: '', width: '', height: '' },
+        { src: '', width: '', height: '' }
+      ]
     ]
   }
 ]
