@@ -85,10 +85,13 @@ const StudioItem: React.FC<StudioProps> = ({ name, city, country, visited, link,
         {images.map(row => (
           <Flex style={{  margin: '0 -5px' }}>
             {row.map(img => (
-              <Box 
+              <Box
+                css={{
+                  backgroundColor: '$gray1',
+                  margin: '$1'
+                }} 
                 style={{ 
                   flex: `calc(${img.width}/${img.height})`,
-                  padding: '5px'
                 }}
                 >
                 <Image

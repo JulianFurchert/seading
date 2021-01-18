@@ -106,6 +106,26 @@ const studios: Studio[] = [
         { name: '_DSF3310.JPG', width: '4896', height: '3264' },
       ],
     ]
+  },
+  {
+    name: 'qu’est-ce que c’est design',
+    link: 'https://www.behance.net/questcequecest',
+    city: 'Singapore',
+    country: 'Singapore',
+    visited: '9. Sept. 2015',
+    images: [
+      [
+        { name: '_DSF3370.JPG', width: '4896', height: '3264' },
+        { name: '_DSF3339.JPG', width: '4896', height: '3264' },
+        { name: '_DSF3365.JPG', width: '3264', height: '4896' },
+        { name: '_DSF3371.JPG', width: '3264', height: '4896' },
+      ],
+      [
+        { name: '_DSF3373.JPG', width: '4896', height: '3264' },
+        { name: '_DSF3354.JPG', width: '4896', height: '3264' },
+        { name: '_DSF3379.JPG', width: '4896', height: '3264' },
+      ],
+    ]
   }
 ]
 
