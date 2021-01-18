@@ -1,7 +1,7 @@
 import { createStyled } from '@stitches/react'
 
 export const colors = {
-  $light_primary: '#007aff',
+  $light_primary: '#ff2d55',
   $light_loContrast: '#FCFCFD',
   $light_hiContrast: '#17171A',
   $light_gray1: '#F0F2F5',
@@ -13,7 +13,7 @@ export const colors = {
   $light_gray7: '#4F5156',
   $light_gray8: '#17171A',
   // dark
-  $dark_primary: '#007aff',
+  $dark_primary: '#ff375f',
   $dark_loContrast: '#141517',
   $dark_hiContrast: '#F0F2F5',
   $dark_gray1: '#212123',
