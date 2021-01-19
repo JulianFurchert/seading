@@ -96,6 +96,7 @@ const StudioItem: React.FC<StudioProps> = ({ name, city, country, visited, link,
                 >
                 <Image
                   src={`/img/interviews/${img.name}`}
+                  sizes="50vw"
                   height={img.height}
                   width={img.width}
                   layout="responsive"
