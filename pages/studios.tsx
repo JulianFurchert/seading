@@ -70,10 +70,10 @@ const StudioItem: React.FC<StudioProps> = ({ name, city, country, visited, link,
             </Text>
             {data.map(i => (
               <Flex css={{ marginRight: '$4'}}>
-                <Text css={{ marginRight: '$1', color: '$gray6' }}>
+                <Text css={{ marginRight: '$1' }}>
                   {i.label}:
                 </Text>
-                <Text>
+                <Text css={{ color: '$gray6' }}>
                   {i.value}
                 </Text>
               </Flex>
