@@ -2,7 +2,8 @@ import { styled } from '../stitches.config'
 import { Link, Flex, Container } from '../components'
 
 const data = [
-  { label: 'E-Mail', href: 'mailto:mail@julianfurchert.com' },
+  { label: 'Eve Jazmati', href: 'https://evejazmati.com/' },
+  { label: 'Julian Furchert', href: 'https://julianfurchert.com/' },
   { label: 'Github', href: 'https://github.com/JulianFurchert' },
 ]
 
