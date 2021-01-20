@@ -24,7 +24,7 @@ export default function Home() {
                 Seading
               </Text>
               <Text variant="headline">
-                a lovely trip memory
+                a lovely memory of a design journey
               </Text>
             </Box>
           </Flex>
