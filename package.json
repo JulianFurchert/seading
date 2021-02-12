@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "0.0.1",
+    "@reach/rect": "^0.13.0",
     "@stitches/react": "0.0.2",
     "framer-motion": "^2.9.4",
     "next": "^10.0.2-canary.4",

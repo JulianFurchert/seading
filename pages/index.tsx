@@ -34,7 +34,13 @@ export default function Home() {
         <Container>
           <FloatingGallery>
             <Flex css={{ justifyContent: 'space-between' }}>
-              <FloatingImage />
+              <Box 
+                css={{
+                  height: 600, 
+                  width: 400, 
+                  backgroundColor: 'green'
+                }}
+              />
               <FloatingImage />
             </Flex>
             <Flex css={{ justifyContent: 'space-between', margin: '$10 0' }}>
