@@ -2,7 +2,7 @@ import React, { useState, useLayoutEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Box } from './Box';
 import { useRect } from "@reach/rect";
-// import Image from 'next/image' 
+import Image from 'next/image' 
 
 type FloatingGalleryProps = {}
 
@@ -28,7 +28,7 @@ export const FloatingGallery: React.FC<FloatingGalleryProps> = ({ children }) =>
   return(
     <Box data-test="test" css={{ height, position: 'relative', overflow: 'hidden' }}>
       <Box ref={ref} css={{ opacity: 0, padding: '$6 0' }}>
-        <Box css={{ height: 600 }} />
+        {/* <Box css={{ height: 600 }} /> */}
         {children}
       </Box>
       {height && (
@@ -49,7 +49,7 @@ export const FloatingGallery: React.FC<FloatingGalleryProps> = ({ children }) =>
             duration: duration,
           }}
         >
-          <Box css={{ height: 600 }} />
+          {/* <Box css={{ height: 600 }} /> */}
           {children}
         </motion.div>
       </AnimatePresence>
@@ -58,17 +58,32 @@ export const FloatingGallery: React.FC<FloatingGalleryProps> = ({ children }) =>
   )
 }
 
-type FloatingImageProps = {}
+type FloatingImageProps = {
+  height: number,
+  width: number,
+  src: string,
+  layoutWidth?: string | number,
+  margin?: string
+}
 
-export const FloatingImage: React.FC<FloatingImageProps> = ( props ) => {
+export const FloatingImage: React.FC<FloatingImageProps> = ({
+  height,
+  width,
+  src,
+  layoutWidth = '40%',
+  margin = '0px',
+}) => {
   return(
-    <Box 
-      css={{
-        height: 600, 
-        width: 400, 
-        backgroundColor: '$primary'
-      }}
-    />
+    <div style={{ width: layoutWidth, margin: margin  }}>
+      <Image 
+        src={src}
+        sizes="50vw"
+        height={height}
+        width={width}
+        layout="responsive"
+        priority={true} 
+      />
+    </div>
   )
 }
 
