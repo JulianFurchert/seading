@@ -16,6 +16,16 @@ export type Studio = {
 
 const studios: Studio[] = [
   {
+    name: 'Yangon, School of Interior Design',
+    link: 'https://www.facebook.com/Yangon.School.of.Interior.Design.2013/?ref=page_internal',
+    city: 'Yangon',
+    country: 'Myanmar',
+    visited: '7. Sept. 2015',
+    images: [
+      [],
+    ]
+  },
+  {
     name: 'Somewhere Else',
     link: 'https://somewhere-else.co/',
     city: 'Singapore',
